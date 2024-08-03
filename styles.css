@@ -1,0 +1,318 @@
+body {
+    margin: auto;
+    font-family: "Roboto";
+    font-weight: bold;
+    color: rgb(240, 240, 240);
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+a {
+    text-decoration: none;
+    color: rgb(240, 240, 240);
+}
+
+.admin-panel {
+    background-color: rgb(25, 160, 250);
+    padding: 1.5rem;
+    font-size: 1.3em;
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+.admin-panel .dashboard-logo img{
+    width: 55px;
+    height: 55px;
+    vertical-align: middle;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+}
+
+.admin-panel img{
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+}
+
+.admin-panel-body, .admin-panel-bottom, .credentials {
+    font-size: .8em;
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+}
+
+.dashboard-logo img:hover {
+    transition: .6s;
+    width: 65px;
+    height: 65px;
+}
+.dashboard-logo a:hover {
+    transition: .6s;
+    font-size: 1.35em;
+}
+
+.admin-panel-body img:hover:hover, .admin-panel-bottom img:hover, .credentials img:hover  {
+    transition: .6s;
+    width: 30px;
+    height: 30px;  
+}
+.admin-panel-body a:hover:hover, .admin-panel-bottom a:hover, .credentials a:hover {
+    transition: .6s;
+    font-size: 1.2em;
+}
+
+.project-panel {
+    grid-row: 1 / 2;
+    grid-column: 2 / 4;
+    padding: 20px;
+    color: black;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+    grid-row: repeat(2 1fr);
+    box-shadow: 4px 4px 4px rgb(223, 223, 223);
+    position: relative;;
+}
+
+.project-searchbar {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+.project-panel img{
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+.project-panel input[type="search"] {
+    background-color: rgb(223, 231, 236);
+    border-radius: 20px;
+    border-style:none;
+    font-size: 1.2em;
+    width: 40vw;
+    height: 5vh;
+    padding: 0 20px;
+}
+.project-panel input[type="search"]:focus {
+    outline-width: 0;
+}
+.project-panel input[type="search"]:focus::placeholder {
+    color: transparent;
+}
+
+.project-panel button {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1rem;
+    width: 7vw;
+    height: 5vh;
+    border-radius: 20px;
+    background-color: rgb(25, 160, 250);
+    border-style: none;
+    cursor: pointer;
+}
+
+.project-panel button:hover {
+    transition: .4s;
+    background-color: rgb(97, 187, 247);
+}
+
+#new-button {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+#upload-button {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+}
+
+#share-button {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+}
+
+#notification-button {
+    background-color: rgb(255, 255, 255);
+    grid-row: 1 / 2;
+    justify-self: end;
+    grid-column: 2 / 3;
+}
+
+.welcome-message {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    place-self: start;
+    display: flex;
+    align-items: center;
+}
+.welcome-message img {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(204, 204, 204);
+    border-radius: 40px;
+}
+#welcome-message-greeting {
+   color: rgb(211, 211, 211);
+}
+#welcome-message-user {
+    font-size: 1.55em;
+}
+.notification-button {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+.project-panel .view-code-button {
+    font-size: .9rem;
+    justify-self: end;
+}
+
+#project-profile-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.main-info-body {
+    grid-row: 2 / 4;
+    grid-column: 2 / 4;
+    background-color: rgb(223, 231, 236);
+    padding: 15px;
+    gap: 25px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    color: black;
+}
+
+.about-me-body {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    font-size: 1.4rem;
+    align-content: center;
+}
+
+.about-me-info {
+    font-size: .9rem;
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px rgb(223, 223, 223);
+    flex-shrink: 1;
+}
+
+.skills-info-body {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    font-size: 1.4rem;
+    align-content: center;
+}
+
+.skills-info-about {
+    font-size: 1.1rem;
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px rgb(223, 223, 223);
+    flex-shrink: 1;
+
+}
+#skill-image-setup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#skill-image-setup img {
+    width: 5vw;
+    height: 5vh;
+}
+
+.project-body-info {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-card-holder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 20vh);
+    gap: 15px;
+}
+
+.project-card-info {
+    background-color: white;
+    font-size: 1.1rem;
+    padding: 35px;
+    background-image: linear-gradient(to right, rgb(245, 186, 78) 2%, white 0%);
+    border-radius: 8px;
+}
+
+.project-card-header {
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header-img {
+    width: 30px;
+    height: 30px;
+}
+
+.project-card-description {
+    font-size: .9rem;
+    color: rgb(172, 172, 172);
+}
+
+.project-card-description img {
+    width: 20px;
+    height: 20px;
+}
+
+.project-card-images {
+    display: flex;
+    height: 60%;
+    justify-content: end;
+    align-items: end;
+    gap: 15px;
+}
+
+.project-card-info:hover {
+    transition: .6s;
+    background-color: blue;
+}
+
+/* #card-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+#card-2 {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+} */
