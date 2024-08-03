@@ -172,6 +172,10 @@ a {
     justify-self: end;
 }
 
+.project-profile-picture {
+    grid-column: 3 / 5;
+}
+
 #project-profile-icon {
     width: 60px;
     height: 60px;
@@ -230,7 +234,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 35px;
+    gap: 15px;
     padding-top: 25px;
     padding-bottom: 25px;
     border-radius: 8px;
@@ -240,14 +244,15 @@ a {
 }
 #skill-image-setup {
     display: flex;
+    flex-shrink: 1;
     flex-direction: column;
     align-items: center;
     gap: 5px;
 }
 
 #skill-image-setup img {
-    width: 5vw;
-    height: 5vh;
+    width: 4vw;
+    height: 4vh;
 }
 
 .project-body-info {
