@@ -15,7 +15,7 @@ a {
 .admin-panel {
     background-color: rgb(25, 160, 250);
     padding: 1.5rem;
-    font-size: 1.3em;
+    font-size: 1.2em;
     grid-column: 1 / 2;
     grid-row: 1 / 4;
     display: flex;
@@ -47,8 +47,8 @@ a {
 
 .dashboard-logo img:hover {
     transition: .6s;
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
 }
 .dashboard-logo a:hover {
     transition: .6s;
