@@ -105,6 +105,8 @@ a {
     width: 40vw;
     height: 5vh;
     padding: 0 20px;
+    min-height: 40px;
+    min-width: 250px;
 }
 .project-panel input[type="search"]:focus {
     outline-width: 0;
@@ -119,6 +121,8 @@ a {
     font-size: 1rem;
     width: 7vw;
     height: 5vh;
+    min-width: 60px;
+    min-height: 30px;
     border-radius: 20px;
     background-color: rgb(25, 160, 250);
     border-style: none;
