@@ -28,7 +28,9 @@ a {
     vertical-align: middle;
     margin-right: .5rem;
     margin-bottom: .5rem;
+    transition: all 0.6s ease;
 }
+
 
 .admin-panel img{
     width: 25px;
@@ -36,6 +38,8 @@ a {
     vertical-align: middle;
     margin-right: .5rem;
     margin-bottom: .5rem;
+    transition: all 0.6s ease;
+
 }
 
 .admin-panel-body, .admin-panel-bottom, .credentials {
@@ -60,11 +64,14 @@ a {
     width: 30px;
     height: 30px;  
 }
-.admin-panel-body a:hover:hover, .admin-panel-bottom a:hover, .credentials a:hover {
+.admin-panel-body a:hover, .admin-panel-bottom a:hover, .credentials a:hover {
     transition: .6s;
     font-size: 1.2em;
 }
 
+.dashboard-logo a, .admin-panel-body a, .admin-panel-bottom a, .credentials a {
+    transition: all 0.6s ease;
+}
 .project-panel {
     grid-row: 1 / 2;
     grid-column: 2 / 4;
@@ -125,16 +132,19 @@ a {
 #new-button {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
+    transition: .6s;
 }
 
 #upload-button {
     grid-row: 2 / 3;
     grid-column: 3 / 4;
+    transition: .6s;
 }
 
 #share-button {
     grid-row: 2 / 3;
     grid-column: 4 / 5;
+    transition: .6s;
 }
 
 #notification-button {
@@ -142,6 +152,7 @@ a {
     grid-row: 1 / 2;
     justify-self: end;
     grid-column: 2 / 3;
+    transition: .6s;
 }
 
 .welcome-message {
@@ -166,10 +177,12 @@ a {
 .notification-button {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
+    transition: .6s;
 }
 .project-panel .view-code-button {
     font-size: .9rem;
     justify-self: end;
+    transition: .6s;
 }
 
 .project-profile-picture {
@@ -189,7 +202,7 @@ a {
     gap: 25px;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
     color: black;
 }
 
@@ -201,6 +214,7 @@ a {
     gap: .9rem;
     font-size: 1.4rem;
     align-content: center;
+    min-width: 10vw;
 }
 
 .about-me-info {
@@ -214,7 +228,6 @@ a {
     padding-bottom: 25px;
     border-radius: 8px;
     box-shadow: 4px 4px 4px rgb(223, 223, 223);
-    flex-shrink: 1;
 }
 
 .skills-info-body {
@@ -239,7 +252,6 @@ a {
     padding-bottom: 25px;
     border-radius: 8px;
     box-shadow: 4px 4px 4px rgb(223, 223, 223);
-    flex-shrink: 1;
 
 }
 #skill-image-setup {
@@ -266,9 +278,20 @@ a {
 
 .project-card-holder {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 20vh);
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(150px, 20vh));
     gap: 15px;
+    transition: .6s ease;
+}
+
+#card {
+    transition: .6s;
+}
+
+.project-card-info:hover {
+    transition: .6s;
+    box-shadow: 8px 8px 8px rgb(172, 172, 172);
+    font-size: 1.1em;
 }
 
 .project-card-info {
@@ -277,6 +300,10 @@ a {
     padding: 35px;
     background-image: linear-gradient(to right, rgb(245, 186, 78) 2%, white 0%);
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
 }
 
 .project-card-header {
@@ -295,23 +322,35 @@ a {
     color: rgb(172, 172, 172);
 }
 
-.project-card-description img {
+.project-card-images img {
     width: 20px;
     height: 20px;
 }
 
-.project-card-images {
-    display: flex;
-    height: 60%;
-    justify-content: end;
-    align-items: end;
-    gap: 15px;
+.project-card-images a img {
+    transition: all 0.6s ease;
+
 }
 
-.project-card-info:hover {
+.project-card-images {
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    gap: 25px;
+    transition: 0.6s ease;
+}
+
+.project-card-images img:hover{
+    transition: .6s;
+    width: 25px;
+    height: 25px;
+}
+
+/* .project-card-info:hover {
     transition: .6s;
     background-color: blue;
-}
+    
+} */
 
 /* #card-1 {
     grid-column: 1 / 2;
